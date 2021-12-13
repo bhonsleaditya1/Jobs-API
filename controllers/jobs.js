@@ -1,4 +1,4 @@
-const Job = require('../models/job')
+const Job = require('../models/Job')
 const {BadRequestError,NotFoundError} = require('../errors')
 const {StatusCodes} = require('http-status-codes')
 
