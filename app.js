@@ -7,7 +7,7 @@ const app = express();
 const helmet = require('helmet')
 const cors = require('cors')
 const xss = require('xss-clean')
-const rateLimiter = require('rate-limiter')
+const rateLimiter = require('express-rate-limit')
 
 const authRouter  = require('./routes/auth')
 const jobsRouter = require('./routes/jobs')
