@@ -9,6 +9,7 @@ const cors = require('cors')
 const xss = require('xss-clean')
 const rateLimiter = require('express-rate-limit')
 const morgan = require('morgan')
+const mongoSanitize = require('express-mongo-sanitize')
 
 const swaggerUI = require('swagger-ui-express')
 const YAML = require('yamljs')
@@ -30,12 +31,14 @@ app.use(
   })
 )
 
-app.use(express.json());
-// extra packages
 app.use(helmet())
 app.use(cors())
 app.use(xss())
 app.use(morgan("combined"))
+app.use(mongoSanitize())
+app.use(express.json());
+// extra packages
+
 
 
 // routes

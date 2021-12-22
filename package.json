@@ -14,6 +14,7 @@
     "dotenv": "latest",
     "express": "latest",
     "express-async-errors": "latest",
+    "express-mongo-sanitize": "^2.1.0",
     "express-rate-limit": "latest",
     "helmet": "latest",
     "http-status-codes": "latest",
